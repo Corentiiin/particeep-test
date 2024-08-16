@@ -17,6 +17,7 @@ class CollectionTest {
   public static List<Double> compute1(List<Integer> input) {
     List<Double> res = new ArrayList<>();
 
+    // Process the operation and add the result to the ‘res’ list.
     input.forEach(x -> res.add(Double.valueOf(Math.pow((x * 2) + 3, 5))));
 
     return res;
@@ -30,12 +31,14 @@ class CollectionTest {
       List<String> res = new ArrayList<>();
 
       for (String string : input) {
+        // In case of empty word.
         if (string.length() == 0) {
           res.add("");
         }
         else {
           String firstChar = string.substring(0, 1).toUpperCase();
-        
+
+          // In the case of a single-character word.
           if (string.length() == 1) {
             res.add(firstChar + firstChar);
           }
